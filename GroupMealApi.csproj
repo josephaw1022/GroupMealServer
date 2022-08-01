@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+   <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\YourApi.XML</DocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWS.Logger.AspNetCore" Version="3.3.0" />
+    <PackageReference Include="AWS.Logger.Core" Version="3.1.0" />
+    <PackageReference Include="AWSSDK.CloudWatchLogs" Version="3.7.2.76" />
+    <PackageReference Include="AWSSDK.Core" Version="3.7.12.9" />
+    <PackageReference Include="DotNetEnv" Version="2.3.0" />
+    <PackageReference Include="MassTransit" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.6" />
+    <PackageReference Include="MongoDB.Driver" Version="2.16.1" />
+    <PackageReference Include="EPPlus" Version="6.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Twilio" Version="5.77.0" />
+  </ItemGroup>
+  
+
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Models\Books\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\Groups\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GroupMealModels\GroupMealModels.csproj" />
+  </ItemGroup>
+  
+</Project>
