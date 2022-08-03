@@ -1,6 +1,9 @@
 
 
-## Read Me
+## Group Meal Server Application 
+
+- This application is meant to be a backend for the group meal ui 
+- This application implements rest api, hubs for signalr, entity framework integration with mongodb, a queue with rabbitmq, logging with aws cloudwatch, etc... 
 
 
 
